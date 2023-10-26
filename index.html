@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0/font/bootstrap-icons.css">
+    <script src="https://kit.fontawesome.com/3929e16ef5.js" crossorigin="anonymous"></script>
+        <script src="{% static 'network/functions.js' %}"></script>
+    <title>E-commerce</title>
+</head>
+    <style>
+      .card1{
+        margin-left: 100px;
+        margin-top: 50px;
+        display: inline-block;
+        border: solid darkblue;
+        border-radius: 5px;
+      }
+      .card1 :hover{
+        background-color: whitesmoke;
+        transform: scale(1.01);
+      }
+      .card2{
+        margin-left: 100px;
+        margin-top: 50px;
+        display: inline-block;
+        border: solid darkblue;
+        border-radius: 5px;
+      }
+      .card2 :hover{
+        background-color: whitesmoke;
+        transform: scale(1.01);
+      }
+      .card3{
+        margin-left: 100px;
+        margin-top: 50px;
+        display: inline-block;
+        border: solid darkblue;
+        border-radius: 5px;
+      }
+      .card3 :hover{
+        background-color: whitesmoke;
+        transform: scale(1.01);
+      }
+    </style>
+<body>  
+  <!--tpnv-->
+    <div class="">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">E-Commerce</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupporte
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </li>
+                  <li class="nav-item dropdown" hidden>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Settings
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Account Settings</a></li>
+                      <li><a class="dropdown-item" href="#">Privacy Settings</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a hidden class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <button type="button" class="btn btn-primary position-relative">
+                    Cart
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      4
+                      <span class="visually-hidden">Item count</span>
+                    </span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </div>
+  <div class="card1">
+    <div class="card" style="width: 18rem;">
+        <img src="https://m.media-amazon.com/images/I/61g3jz6ISfL._AC_UF894,1000_QL80_.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">ASUS X515</h5>
+          <div class="price1">
+            <p><strong>P29,995</strong></p>
+          </div>
+          <p class="card-text">ASUS X515 has a dual storage design to give you the benefits of superfast data performance and a large storage capacity.</p>
+        </div>
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add to Cart
+            </button>
+      </div>
+        </div>
+   
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Product</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Productname">
+            </div>
+            <div class="input-group">
+              <span class="input-group-text">Description</span>
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+            <br>
+            <div class="input-group">
+              <span class="input-group-text">$</span>
+              <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+              <span class="input-group-text">0.00</span>
+            </div>
+            <br>
+            <div class="mb-3">
+              <label for="formFileSm" class="form-label">Product Image</label>
+              <input class="form-control form-control-sm" id="formFileSm" type="file">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card2">
+    <div class="card" style="width: 18rem;">
+        <img src="https://i.ebayimg.com/images/g/ynEAAOSwZBBjz~8B/s-l1600.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">ACER PREDATOR HELIOS</h5>
+          <div class="price2">
+            <p><strong>P45,000</strong></p>
+          </div>
+          <p class="card-text">The Helios 300, as a high-performance gaming laptop and powered by a Core i7 processor and it comes with 16GB of RAM. </p>
+        </div>
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add to Cart
+            </button>
+      </div>
+        </div>
+
+        <div class="card3">
+          <div class="card" style="width: 18rem;">
+              <img src="https://m.media-amazon.com/images/I/61g3jz6ISfL._AC_UF894,1000_QL80_.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">LENOVO IDEAPAD FLEX 5i</h5>
+                <div class="price3">
+                  <p><strong>P36,679</strong></p>
+                </div>
+                <p class="card-text">The Lenovo IdeaPad Flex 5 is inadequate for gaming. Its graphics perform poorly in most games, even in some older titles.</p>
+              </div>
+              <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Add to Cart
+                  </button>
+            </div>
+              </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
